@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    paths: "packages/container/**"
+    path: "packages/container/**"
     branches: [ "main"]
     
   pull_request:
@@ -26,5 +26,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      
+    before_script:
+      - cd packages/container/**
       - run: npm install
       - run: npm run build
