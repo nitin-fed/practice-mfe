@@ -37,7 +37,7 @@ jobs:
           
       - uses: actions/checkout@v2
       - name: Open Web Client Directory
-        working-directory: ../packages/container/
+        working-directory: ./packages/container/
         
       - run: npm install
       - run: npm run build
