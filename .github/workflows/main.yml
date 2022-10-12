@@ -4,21 +4,27 @@ on:
     branches: 
       - main
 
-    paths:
-      - '../../packages/container/**'
+    
 
 defaults:
   run:
-    working-directory: '../../packages/container/**'
+    working-directory: './packages/container/'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '2.10.0'
+      - uses: actions/checkout@v2
+      - name: Open Web Client Directory
+        working-directory: ../packages/container/
+        
+        
+      - name: Open Web Client Directory
+        run: |
+          ls -la
+          cd ../packages/container/
+          ls -la
+
       - run: npm install
       - run: npm run build
