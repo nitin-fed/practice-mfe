@@ -23,12 +23,7 @@ jobs:
          working-directory: ./packages/container
          run: |
           cd ..
-        
-        
-       - name: find dir
-         with:
-          path: ~/.packages
-       
+         
  
        - name: pwd Nitin
          run:
