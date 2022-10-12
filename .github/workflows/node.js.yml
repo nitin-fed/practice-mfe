@@ -28,11 +28,7 @@ jobs:
     - name: find dir
       with:
        path: ~/.packages
-       
-    - name: Open Web Client Directory
-      run:
-        cd ..
-      
+    
      
     - name: pwd Nitin
       run:
