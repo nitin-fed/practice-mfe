@@ -35,8 +35,7 @@ jobs:
         
     - run: npm ci
       working-directory: './packages/container/'
-    - run: npm run start
-      working-directory: './packages/container/'
+     
         
              
         
