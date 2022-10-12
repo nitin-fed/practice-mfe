@@ -10,41 +10,39 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: self-hosted    
+    defaults:
+       run:
+         working-directory: ./server/
+    
  
+    
     strategy:
-      matrix:
-        node-version: [ 16.x ]
+       matrix:
+          node-version: [ 16.x ]
 
     steps:
-       - uses: actions/checkout@v3
-       - name: Setup and run tests
-         working-directory: ./packages/container
-         run: |
-          cd ..
-          
-          
-       - name: Setup Node.js
-         uses: actions/setup-node@v2
-         with:
-            node-version: 16.14.0
-            cache-dependency-path: "./packages/container"
+         - uses: actions/checkout@v3
+         - name: Setup and run tests
+           working-directory: ./packages/container
+           run: |
+            cd ..
 
- 
-       - name: pwd Nitin
-         run:
-           pwd
-           ls -lha
-    
-      
-      
-       - name: Use Node.js ${{ matrix.node-version }}
-         uses: actions/setup-node@v3
-      
-         with:
-           node-version: ${{ matrix.node-version }}
-           cache: 'npm'
-       - run: npm ci
-       - run: npm run build --if-present
-       - run: npm test
+
+         - name: Setup Node.js
+           uses: actions/setup-node@v2
+           with:
+              node-version: 16.14.0
+              cache-dependency-path: "./packages/container"
+
+
+         - name: pwd Nitin
+           run:
+             pwd
+             ls -lha
+             
+         - name: Use Node.js ${{ matrix.node-version }}
+             
+         - run: npm ci
+         - run: npm run build --if-present
+         - run: npm test
