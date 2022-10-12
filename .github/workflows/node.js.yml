@@ -19,6 +19,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Experiment
+      run: |
+        pwd   
+        cd ../../
+        pwd 
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
@@ -26,13 +32,7 @@ jobs:
         cache: 'npm'
         cache-dependency-path: './packages/container/package-lock.json'
         
-    - name: Experiment
-      run: |
-        pwd   
-        cd ../
-        mkdir hello
-        cd hello
-        pwd       
+          
         
     - run: npm ci
       working-directory: './packages/container/'
