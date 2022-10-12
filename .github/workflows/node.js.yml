@@ -19,11 +19,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Setup and run tests
+      working-directory: ./packages/container
+        
+        
     - name: find dir
       with:
        path: ~/.packages
-    
-     
+       
+ 
     - name: pwd Nitin
       run:
         pwd
@@ -33,9 +37,9 @@ jobs:
       run:
         cd ..
         ls -lha
-        
-    - name: workindirectory
-      working-directory: ./packages/container
+     
+   
+      
      
      
     - name: Use Node.js ${{ matrix.node-version }}
