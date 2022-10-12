@@ -21,7 +21,7 @@ jobs:
     - name: Experiment
       run: |
         pwd   
-        cd ../../
+        cd ../
         pwd 
 
     - name: Use Node.js ${{ matrix.node-version }}
