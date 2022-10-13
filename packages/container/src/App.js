@@ -13,7 +13,6 @@ const App = () => {
     </BrowserRouter>
   );
 };
-
 export default App;
 
 // - uses: shinyinc/action-aws-cli@v1.2
