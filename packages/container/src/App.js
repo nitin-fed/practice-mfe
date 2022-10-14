@@ -9,6 +9,7 @@ const App = () => {
   return (
     <React.Fragment>
       <BrowserRouter>
+        <h1>Welcome</h1>
         <Header />
         <MarketingApp />
       </BrowserRouter>
