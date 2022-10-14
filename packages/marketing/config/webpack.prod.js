@@ -10,7 +10,8 @@ const domain = process.env.PROCESS_DOMAIN;
 const prodConfig = {
   mode: "production",
   output: {
-    filename: "[name].[contentpath].js"
+    filename: "[name].[contentpath].js",
+    publicpath: "/marketing/latest/"
   },
   plugins: [
     new ModuleFederationPlugin({
