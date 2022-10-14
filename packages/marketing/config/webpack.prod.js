@@ -11,7 +11,7 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contentpath].js",
-    publicpath: "/marketing/latest/"
+    publicPath: "/marketing/latest/"
   },
   plugins: [
     new ModuleFederationPlugin({
