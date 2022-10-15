@@ -15,7 +15,6 @@ const devConfig = {
     }
   },
   plugins: [
-   
     new ModuleFederationPlugin({
       name: "marketing",
       filename: "remoteEntry.js",
