@@ -10,21 +10,16 @@ import { Switch, Route, Router } from "react-router-dom";
  */
 
 const generateClassName = createGenerateClassName({
-  productionPrefix: "ma"
+  productionPrefix: "au"
 });
-
-import Landing from "./components/Landing";
-import Pricing from "./components/Pricing";
 
 const App = ({ history }) => {
   return (
     <div>
+      <h1>Auth Module</h1>
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
-          <Switch>
-            <Route exact path='/pricing' component={Pricing} />
-            <Route path='/' component={Landing} />
-          </Switch>
+          <Switch></Switch>
         </Router>
       </StylesProvider>
     </div>

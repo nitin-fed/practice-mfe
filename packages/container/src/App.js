@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import MarketingApp from "./components/MarketingApp";
 import { BrowserRouter } from "react-router-dom";
 import { StylesProvider, createGenerateClassName } from "@material-ui/core";
+import AuthApp from "./components/AuthApp";
 
 const generateClassName = createGenerateClassName({
   productionPrefix: "co"
@@ -17,6 +18,7 @@ const App = () => {
         <StylesProvider generateClassName={generateClassName}>
           <Header />
           <MarketingApp />
+          <AuthApp />
         </StylesProvider>
       </BrowserRouter>
     </React.Fragment>
